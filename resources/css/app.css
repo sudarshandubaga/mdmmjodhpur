@@ -1,0 +1,44 @@
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block";
+@import "lightbox2/dist/css/lightbox.min.css";
+@import "tailwindcss";
+@source "../views";
+
+h3.heading {
+    @apply text-3xl pb-10 relative text-blue-900 font-semibold;
+
+    &::after {
+        content: "";
+        @apply block w-[100px] border-b-4 border-blue-900 mt-3;
+    }
+
+    &.text-center::after {
+        @apply mx-auto;
+    }
+}
+
+a.subheading {
+    @apply block text-2xl pb-3 relative text-blue-900 font-medium;
+
+    &::after {
+        content: "";
+        @apply block w-[100px] border-b-3 border-blue-900 mt-2;
+    }
+}
+
+p {
+    @apply text-gray-600 leading-7;
+}
+footer p {
+    @apply text-gray-400;
+}
+.button {
+    @apply px-5 py-2 rounded transition-all;
+
+    &.primary {
+        @apply bg-blue-900 text-white;
+
+        &:hover {
+            @apply bg-orange-400;
+        }
+    }
+}
