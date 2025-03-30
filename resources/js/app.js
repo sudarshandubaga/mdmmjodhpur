@@ -42,13 +42,29 @@ document.addEventListener("DOMContentLoaded", () => {
             el: ".swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
     });
 
-    // Initialize Lightbox (using Lightbox2)
-    // if (typeof lightbox !== "undefined") {
-    //     lightbox.option({
-    //         resizeDuration: 200,
-    //         wrapAround: true,
-    //     });
-    // }
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("-translate-x-full");
+        });
+    }
 });

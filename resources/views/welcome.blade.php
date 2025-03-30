@@ -11,19 +11,19 @@
 
 <body class="bg-gray-100">
     <header class="py-3 bg-white">
-        <div class="container mx-auto">
-            <div class="flex gap-3 items-center justify-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap gap-3 items-center justify-center text-center sm:flex-nowrap sm:text-left">
                 <img src="https://sgktc.org/wp-content/themes/sgktc/sgktc/assets/images/logo.png" alt=""
-                    class="size-24">
+                    class="size-24 mx-auto sm:mx-0">
                 <div>
-                    <div class="text-blue-900 text-3xl font-semibold">
+                    <div class="text-blue-900 text-base sm:text-3xl font-semibold">
                         Shah Goverdhan Lal Kabra Teachers' College (C.T.E), Jodhpur
                     </div>
-                    <div>
+                    <div class="text-xs sm:text-base">
                         Upgrade as College for Teachers Education by the Ministry of Human Resources Development, Govt.
                         of India, New Delhi
                     </div>
-                    <div class="text-orange-400">
+                    <div class="text-orange-400 text-xs sm:text-base">
                         Affiliated to Jai Narain Vyas university, Jodhpur (Managed by Shri Mahesh Shikshan Sansthan)
                     </div>
                 </div>
@@ -31,21 +31,29 @@
         </div>
     </header>
 
-    <nav class="bg-blue-900 text-md">
-        <div class="container mx-auto">
-            <ul
-                class="flex justify-center text-white [&>li>a]:block [&>li>a]:p-4 [&>li:hover>a]:bg-orange-400 font-light">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Members</a></li>
-                <li><a href="#">Publications</a></li>
-                <li><a href="#">Infrastructure</a></li>
-                <li><a href="#">Documents</a></li>
-                <li><a href="#">Academics</a></li>
-                <li><a href="#">News & Notice</a></li>
-                <li><a href="#">Calendar</a></li>
-            </ul>
+    <nav class="bg-blue-900 text-sm sm:text-md">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div class="md:hidden text-white">
+                    MENU
+                </div>
+                <button id="menu-toggle" class="text-white sm:hidden">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
         </div>
+        <ul id="menu"
+            class="fixed top-0 left-0 h-full w-64 bg-blue-900 text-white transform -translate-x-full transition-transform sm:translate-x-0 sm:relative sm:w-auto sm:h-auto sm:bg-transparent sm:flex sm:flex-wrap sm:justify-center [&>li>a]:block [&>li>a]:p-2 sm:[&>li>a]:p-4 [&>li:hover>a]:bg-orange-400 font-light z-50">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Infrastructure</a></li>
+            <li><a href="#">Documents</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">News & Notice</a></li>
+            <li><a href="#">Calendar</a></li>
+        </ul>
     </nav>
 
     {{-- Banner Slider --}}
@@ -74,10 +82,10 @@
     </section>
 
     {{-- About Us Section --}}
-    <section class="py-16">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-5 gap-10 items-center">
-                <div class="col-span-2 h-full">
+    <section class="md:py-16 py-5">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:grid sm:grid-cols-5 gap-10 items-center">
+                <div class="sm:col-span-2 h-full">
                     <div class="bg-white flex flex-col rounded overflow-hidden h-full">
                         <div class="bg-blue-900 text-white p-3 text-lg text-center uppercase">
                             News &amp; Notice
@@ -153,10 +161,10 @@
     </div>
 
     {{-- Infrastructure Section --}}
-    <section class="py-16">
-        <div class="container mx-auto">
+    <section class="md:py-16 py-5">
+        <div class="container mx-auto px-4">
             <h3 class="heading text-center">College Infrastructure</h3>
-            <div class="grid grid-cols-3 gap-5 mb-10">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
                 <div class="bg-white overflow-hidden rounded-lg shadow">
                     <img src="https://sgktc.org/wp-content/uploads/2021/07/college-library.png" alt=""
                         class="w-full aspect-video object-cover">
@@ -201,7 +209,7 @@
     </section>
 
     {{-- Photo Gallery Section --}}
-    <section class="py-16 bg-white">
+    <section class="md:py-16 py-5 bg-white">
         <h3 class="heading text-center">Photo Gallery</h3>
         <div class="container mx-auto">
             <div class="swiper photo-gallery-slider">
@@ -257,10 +265,10 @@
     </section>
 
     {{-- Principal's Message --}}
-    <section class="py-16 bg-gray-100">
+    <section class="md:py-16 py-5 bg-gray-100">
         <div class="container mx-auto">
             <h3 class="heading text-center">Principal's Message</h3>
-            <div class="grid grid-cols-3 gap-10 items-center">
+            <div class="flex flex-col md:grid md:grid-cols-3 gap-10 items-center">
                 <div class="col-span-1">
                     <img src="{{ asset('principal.png') }}" alt="Principal's Photo"
                         class=" object-cover w-full bg-white">
@@ -288,18 +296,17 @@
 
     {{-- Footer Section --}}
     <footer class="bg-gray-900 text-white py-10">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-3 gap-5">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
                 <div>
                     <img src="https://sgktc.org/wp-content/themes/sgktc/sgktc/assets/images/logo.png" alt=""
-                        class="mb-3">
-                    {{-- <h4 class="text-lg font-semibold mb-3">Contact Us</h4> --}}
-                    <h4 class="text-lg font-semibold mb-3">Shah Goverdhan Lal Kabra Teachers' College (C.T.E), Jodhpur
-                    </h4>
+                        class="mb-3 mx-auto sm:mx-0">
+                    <h4 class="text-lg font-semibold mb-3 text-center sm:text-left">Shah Goverdhan Lal Kabra Teachers'
+                        College (C.T.E), Jodhpur</h4>
 
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-3">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-3 text-center sm:text-left">Quick Links</h4>
                     <div class="grid grid-cols-2">
                         <ul class="space-y-2 text-gray-400">
                             <li><a href="#" class="hover:text-orange-400">Home</a></li>
@@ -321,21 +328,22 @@
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-3">Contact Address</h4>
-                    <p class="flex gap-3">
+                    <h4 class="text-lg font-semibold mb-3 text-center sm:text-left">Contact Address</h4>
+                    <p class="flex flex-col gap-3 text-center sm:text-left">
                         Shah Goverdhan Lal Kabra Teachers' College (C.T.E.) <br />
                         Near Geeta Bhawan, Umaid Hospital
                         Road, <br /> Jodhpur &mdash; 342003
                     </p>
                     <div class="my-3 border-t border-gray-600"></div>
                     <div class="space-y-3">
-                        <a href="tel:+91-1234567890" class="flex items-center gap-3">
+                        <a href="tel:+91-1234567890" class="flex items-center gap-3 justify-center sm:justify-start">
                             <span class="material-symbols-outlined text-orange-400">
                                 call
                             </span>
                             +91-1234567890
                         </a>
-                        <a href="mailto:info@sgktc.org" class="flex items-center gap-3">
+                        <a href="mailto:info@sgktc.org"
+                            class="flex items-center gap-3 justify-center sm:justify-start">
                             <span class="material-symbols-outlined text-orange-400">
                                 mail
                             </span>

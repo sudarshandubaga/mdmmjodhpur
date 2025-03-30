@@ -42,3 +42,43 @@ footer p {
         }
     }
 }
+
+.container {
+    @apply px-4;
+}
+
+img {
+    @apply max-w-full h-auto;
+}
+
+.flex-wrap {
+    @apply flex-wrap;
+}
+
+.text-center {
+    @apply text-center;
+}
+
+.sm\:text-left {
+    @apply sm:text-left;
+}
+
+.sm\:flex-nowrap {
+    @apply sm:flex-nowrap;
+}
+
+.sm\:text-base {
+    @apply sm:text-base;
+}
+
+.sm\:grid-cols-5 {
+    @apply sm:grid-cols-5;
+}
+
+.sm\:grid-cols-3 {
+    @apply sm:grid-cols-3;
+}
+
+.sm\:justify-start {
+    @apply sm:justify-start;
+}
