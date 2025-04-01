@@ -82,3 +82,25 @@ img {
 .sm\:justify-start {
     @apply sm:justify-start;
 }
+
+.editor {
+    * {
+        @apply text-gray-600 text-lg;
+    }
+
+    table {
+        @apply !w-full;
+    }
+
+    p {
+        @apply mb-3;
+    }
+
+    ul {
+        list-style: inside disc;
+    }
+
+    ol {
+        list-style: inside decimal;
+    }
+}

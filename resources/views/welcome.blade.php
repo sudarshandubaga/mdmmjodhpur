@@ -13,19 +13,17 @@
     <header class="py-3 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap gap-3 items-center justify-center text-center sm:flex-nowrap sm:text-left">
-                <img src="https://sgktc.org/wp-content/themes/sgktc/sgktc/assets/images/logo.png" alt=""
-                    class="size-24 mx-auto sm:mx-0">
+                <img src="{{ asset('images/logo.png') }}" alt="" class="size-24 mx-auto sm:mx-0">
                 <div>
-                    <div class="text-blue-900 text-base sm:text-3xl font-semibold">
-                        Shah Goverdhan Lal Kabra Teachers' College (C.T.E), Jodhpur
+                    <div class="text-blue-900 text-base sm:text-4xl font-semibold">
+                        {{ env('APP_NAME') }}
                     </div>
                     <div class="text-xs sm:text-base">
-                        Upgrade as College for Teachers Education by the Ministry of Human Resources Development, Govt.
-                        of India, New Delhi
+                        Affiliated to Jai Narain Vyas university, Jodhpur (Managed by Madhuvan Shikshan Sansthan)
                     </div>
-                    <div class="text-orange-400 text-xs sm:text-base">
+                    {{-- <div class="text-orange-400 text-xs sm:text-base">
                         Affiliated to Jai Narain Vyas university, Jodhpur (Managed by Shri Mahesh Shikshan Sansthan)
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -315,7 +313,7 @@
                             <li><a href="#" class="hover:text-orange-400">Publications</a></li>
                             <li><a href="#" class="hover:text-orange-400">Members</a></li>
                             <li><a href="#" class="hover:text-orange-400">Gallery</a></li>
-                            <li><a href="#" class="hover:text-orange-400">Alumni</a></li>
+                            {{-- <li><a href="#" class="hover:text-orange-400">Alumni</a></li> --}}
                         </ul>
                         <ul class="space-y-2 text-gray-400">
                             <li><a href="#" class="hover:text-orange-400">History</a></li>
