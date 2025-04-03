@@ -1,6 +1,6 @@
 @extends('admin.layouts.afterlogin')
 
-@section('title', 'Blog » Add New')
+@section('title', 'Publication » Add New')
 
 @section('admin_content')
     <!-- Content -->
@@ -11,7 +11,7 @@
                 <div class="card-body py-2">
                     <div class="d-flex align-items-center">
                         <div class="flex-grow-1">
-                            <h3 class="m-0">Add New Blog</h3>
+                            <h3 class="m-0">Add New Publication</h3>
                         </div>
                         <div class="text-end">
                             <button class="btn btn-primary px-5">Save</button>

@@ -29,7 +29,7 @@
             <textarea name="google_map" id="google_map" class="form-control" placeholder="Enter Google Map URL" rows="5">{{ old('google_map', $site->google_map ?? '') }}</textarea>
         </div>
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="footer_scripts" class="form-label">Extra Scripts</label>
             <textarea name="footer_scripts" id="footer_scripts" class="form-control"
                 placeholder="Add scripts for Webmaster, Analytics, Adsense, Search Console, etc." rows="10">{{ old('footer_scripts', $site->footer_scripts ?? '') }}</textarea>
@@ -51,7 +51,7 @@
                 <input type="text" name="instagram_link" id="instagram_link" class="form-control"
                     placeholder="Enter Instagram link" value="{{ old('instagram_link', $site->instagram_link ?? '') }}">
             </div>
-        </div>
+        </div> --}}
     </div>
     <div class="col-sm-4 col-lg-3">
         <div class="mb-3">

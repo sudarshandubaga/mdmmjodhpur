@@ -14,7 +14,7 @@
     <title>@yield('title') </title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('admin/assets/img/favicon/favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ $site->favicon }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -74,6 +74,8 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script src="https://buttons.github.io/buttons.js"></script>
+
+    {{-- {!! $site->footer_scripts !!} --}}
 
     @stack('extra_scripts')
   </body>

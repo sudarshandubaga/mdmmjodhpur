@@ -10,14 +10,20 @@
                                 placeholder="Enter name" value="{{ old('name') }}" required>
                         </div>
                         <div class="mb-3">
-                            <label for="position" class="form-label">Position / Designation</label>
-                            <input type="text" id="position" name="position" class="form-control"
-                                placeholder="Enter position" value="{{ old('position') }}" required>
+                            <label for="designation" class="form-label">Position / Designation</label>
+                            <input type="text" id="designation" name="designation" class="form-control"
+                                placeholder="Enter Designation" value="{{ old('designation') }}" required>
                         </div>
                         <div class="mb-3">
                             <label for="category" class="form-label">Category</label>
-                            <input type="text" id="category" name="category" class="form-control"
-                                placeholder="Enter category" value="{{ old('category') }}">
+                            <select id="category" name="category" class="form-control">
+                                <option value="">Select Category</option>
+                                <option value="General" {{ old('category') == 'General' ? 'selected' : '' }}>General
+                                </option>
+                                <option value="OBC" {{ old('category') == 'OBC' ? 'selected' : '' }}>OBC</option>
+                                <option value="ST" {{ old('category') == 'ST' ? 'selected' : '' }}>ST</option>
+                                <option value="SC" {{ old('category') == 'SC' ? 'selected' : '' }}>SC</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="qualification" class="form-label">Qualification</label>
@@ -39,7 +45,8 @@
                             <select id="team_type" name="team_type" class="form-control">
                                 <option value="Teaching"
                                     {{ old('team_type', 'Teaching') == 'Teaching' ? 'selected' : '' }}>Teaching</option>
-                                <option value="Non-Teaching" {{ old('team_type') == 'Non-Teaching' ? 'selected' : '' }}>
+                                <option value="Non-Teaching"
+                                    {{ old('team_type') == 'Non-Teaching' ? 'selected' : '' }}>
                                     Non-Teaching</option>
                                 <option value="Other" {{ old('team_type') == 'Other' ? 'selected' : '' }}>Other
                                 </option>
@@ -56,7 +63,7 @@
             <div class="card-body">
                 <div class="mb-3">
                     <label for="image_file" class="form-label">Choose Image</label>
-                    <x-crop-image name="image" image_file="image_file" width="500" height="500"
+                    <x-crop-image name="image" image_file="image_file" width="400" height="500"
                         image="{{ @$team->image }}" />
                 </div>
             </div>

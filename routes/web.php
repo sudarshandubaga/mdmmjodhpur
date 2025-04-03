@@ -1,10 +1,16 @@
 <?php
 
+use App\Http\Controllers\AcademicController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\InfrastructureController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\SliderController;
@@ -37,6 +43,12 @@ Route::group([
             'blog'              => BlogController::class,
             'page'              => PageController::class,
             'team'              => TeamController::class,
+            'infrastructure'    => InfrastructureController::class,
+            'gallery'    => GalleryController::class,
+            'news'    => NewsController::class,
+            'course'    => CourseController::class,
+            'academic'    => AcademicController::class,
+            'document'    => DocumentController::class,
         ]);
     });
 });

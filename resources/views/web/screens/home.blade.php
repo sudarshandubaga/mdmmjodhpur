@@ -5,18 +5,11 @@
     <section>
         <div class="swiper" id="main carousel">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="https://sgktc.org/wp-content/uploads/2021/08/slide-2.jpg" alt="Slide 1"
-                        class="w-full aspect-[3/1] object-cover">
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://sgktc.org/wp-content/uploads/2021/08/slide-2.jpg" alt="Slide 2"
-                        class="w-full aspect-[3/1] object-cover">
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://sgktc.org/wp-content/uploads/2021/08/slide-2.jpg" alt="Slide 3"
-                        class="w-full aspect-[3/1] object-cover">
-                </div>
+                @foreach ($sliders as $slider)
+                    <div class="swiper-slide">
+                        <img src="{{ $slider->image }}" alt={{ $slider->title }}" class="w-full aspect-[3/1] object-cover">
+                    </div>
+                @endforeach
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -178,8 +171,7 @@
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="https://sgktc.org/wp-content/uploads/2021/07/college-library.png"
-                            data-lightbox="gallery">
+                        <a href="https://sgktc.org/wp-content/uploads/2021/07/college-library.png" data-lightbox="gallery">
                             <img src="https://sgktc.org/wp-content/uploads/2021/07/college-library.png" alt="Library"
                                 class="rounded-lg object-cover aspect-video w-full">
                         </a>

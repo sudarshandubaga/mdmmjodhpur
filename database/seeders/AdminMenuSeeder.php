@@ -6,6 +6,7 @@ use App\Models\AdminMenu;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class AdminMenuSeeder extends Seeder
 {
@@ -37,34 +38,22 @@ class AdminMenuSeeder extends Seeder
         ]);
 
         $this->addRow([
-            'label' => 'FAQ',
-            'icon'  => 'bx bx-question-mark',
+            'label' => 'Gallery',
+            'icon'  => 'bx bx-image',
+            'route_name' => 'admin.gallery.index'
         ]);
 
         $this->addRow([
-            'label' => 'Create New FAQ',
-            'route_name' => 'admin.faq.create',
-        ], true);
-
-        $this->addRow([
-            'label' => 'View FAQs',
-            'route_name' => 'admin.faq.index',
-        ], true);
-
-        $this->addRow([
-            'label' => 'Blog',
-            'icon'  => 'bx bx-pin',
+            'label' => 'Documents',
+            'icon'  => 'bx bx-file',
+            'route_name' => 'admin.document.index'
         ]);
 
         $this->addRow([
-            'label' => 'Create New Blog',
-            'route_name' => 'admin.blog.create',
-        ], true);
-
-        $this->addRow([
-            'label' => 'View Blogs',
-            'route_name' => 'admin.blog.index',
-        ], true);
+            'label' => 'News & Notice',
+            'icon'  => 'bx bx-news',
+            'route_name' => 'admin.news.index'
+        ]);
 
         $this->addRow([
             'label' => 'Team',
@@ -82,6 +71,66 @@ class AdminMenuSeeder extends Seeder
         ], true);
 
         $this->addRow([
+            'label' => 'Course',
+            'icon'  => 'bx bx-group',
+        ]);
+
+        $this->addRow([
+            'label' => 'Create New Course',
+            'route_name' => 'admin.course.create',
+        ], true);
+
+        $this->addRow([
+            'label' => 'View Courses',
+            'route_name' => 'admin.course.index',
+        ], true);
+
+        $this->addRow([
+            'label' => 'Academic',
+            'icon'  => 'bx bx-group',
+        ]);
+
+        $this->addRow([
+            'label' => 'Create New Academic',
+            'route_name' => 'admin.academic.create',
+        ], true);
+
+        $this->addRow([
+            'label' => 'View Academics',
+            'route_name' => 'admin.academic.index',
+        ], true);
+
+        $this->addRow([
+            'label' => 'Publication',
+            'icon'  => 'bx bx-pin',
+        ]);
+
+        $this->addRow([
+            'label' => 'Create New Publication',
+            'route_name' => 'admin.blog.create',
+        ], true);
+
+        $this->addRow([
+            'label' => 'View Publications',
+            'route_name' => 'admin.blog.index',
+        ], true);
+
+        $this->addRow([
+            'label' => 'Infrastructure',
+            'icon'  => 'bx bx-pin',
+        ]);
+
+        $this->addRow([
+            'label' => 'Create New Infrastructure',
+            'route_name' => 'admin.infrastructure.create',
+        ], true);
+
+        $this->addRow([
+            'label' => 'View Infrastructures',
+            'route_name' => 'admin.infrastructure.index',
+        ], true);
+
+        $this->addRow([
             'label' => 'Enquiry',
             'icon'  => 'bx bx-phone',
             'route_name' => 'admin.enquiry.index',
@@ -92,7 +141,7 @@ class AdminMenuSeeder extends Seeder
 
     protected function addRow($data, $hasParent = false)
     {
-        $data['id'] = count($this->data) + 1;
+        $data['id'] = Str::uuid();
         $data['admin_menu_id'] = $hasParent ? $this->getParent() : null;
         if (empty($data['icon'])) {
             $data['icon'] = null;
@@ -104,6 +153,7 @@ class AdminMenuSeeder extends Seeder
             $data['params'] = [];
         }
         $data['params'] = json_encode($data['params']);
+        $data['sort_by'] = count($this->data);
         $this->data[] = $data;
     }
 

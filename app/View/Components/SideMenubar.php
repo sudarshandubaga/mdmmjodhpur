@@ -22,8 +22,7 @@ class SideMenubar extends Component
      */
     public function render(): View|Closure|string
     {
-        $adminMenus = AdminMenu::with('children')->whereNull('admin_menu_id')->oldest()->get();
-        // dd($adminMenus->toArray());
+        $adminMenus = AdminMenu::with('children')->whereNull('admin_menu_id')->orderBy('sort_by')->get();
         return view('components.side-menubar', compact('adminMenus'));
     }
 }

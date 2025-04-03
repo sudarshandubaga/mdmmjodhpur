@@ -1,13 +1,13 @@
 @extends('admin.layouts.afterlogin')
 
-@section('title', 'Blog')
+@section('title', 'Publication')
 
 @section('admin_content')
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
         <x-alert />
         <div class="card">
-            <h5 class="card-header">View Blogs</h5>
+            <h5 class="card-header">View Publications</h5>
             <div class="card-body">
                 @if ($blogs->isEmpty())
                     <div>No data found.</div>

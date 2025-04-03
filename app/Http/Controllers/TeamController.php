@@ -33,9 +33,13 @@ class TeamController extends Controller
     {
         $team = new Team();
         $team->name = $request->name;
-        $team->position = $request->position;
-        $team->imdb_link = $request->imdb_link;
+        $team->category = $request->category;
+        $team->designation = $request->designation;
+        $team->qualification = $request->qualification;
+        $team->experience = $request->experience;
+        $team->subjects_taught = $request->subjects_taught;
         $team->description = $request->description;
+        $team->team_type = $request->team_type;
 
         if (!empty($request->image)) {
             $team->image = dataUriToImage($request->image, "teams");
@@ -68,9 +72,13 @@ class TeamController extends Controller
     public function update(Request $request, Team $team)
     {
         $team->name = $request->name;
-        $team->position = $request->position;
-        $team->imdb_link = $request->imdb_link;
+        $team->category = $request->category;
+        $team->designation = $request->designation;
+        $team->qualification = $request->qualification;
+        $team->experience = $request->experience;
+        $team->subjects_taught = $request->subjects_taught;
         $team->description = $request->description;
+        $team->team_type = $request->team_type;
 
         if (!empty($request->image)) {
             if (!empty($team->image)) {

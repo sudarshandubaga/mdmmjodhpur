@@ -1,6 +1,7 @@
 @props(['width' => 300, 'height' => 300, 'name' => 'image', 'image' => ''])
 
 <label class="drop-zone" id="drop-zone-{{ $name }}">
+    <h3>{{ $width }} x {{ $height }}</h3>
     <p>Click to upload image</p>
     <input type="file" id="{{ $name }}_file" name="{{ $name }}_file" class="crop-image-picker"
         accept="image/*">

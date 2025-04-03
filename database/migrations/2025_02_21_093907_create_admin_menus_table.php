@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('route_name')->nullable();
             $table->string('link')->nullable();
             $table->string('icon')->nullable();
-            $table->string('sort_by')->default(0);
+            $table->integer('sort_by')->default(0);
             $table->string('role')->default('admin');
             $table->longText('params')->nullable();
             $table->timestamps();

@@ -22,8 +22,8 @@ class PageController extends Controller
             case 'news':
                 return $this->news($page);
 
-                // case 'about':
-                //     return $this->about($page);
+            case 'member':
+                return $this->member($page);
 
             case 'contact':
                 return $this->contact($page);
@@ -42,11 +42,15 @@ class PageController extends Controller
         return view('web.screens.news', compact('page', 'blogs'));
     }
 
-    // private function about($page)
-    // {
-    //     $members = Team::get();
-    //     return view('web.screens.about', compact('page', 'members'));
-    // }
+    private function member($page)
+    {
+        $groups = Team::pluck("team_type");
+        $members = [];
+        foreach ($groups as $type) {
+            $members[$type] = Team::where('team_type', $type)->get();
+        }
+        return view('web.screens.member', compact('page', 'members'));
+    }
 
     private function contact($page)
     {
