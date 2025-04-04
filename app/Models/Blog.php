@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blog extends Model
 {
-    use HasUuids;
-
     public function getRouteKeyName()
     {
         return 'slug';

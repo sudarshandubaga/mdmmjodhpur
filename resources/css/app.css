@@ -1,6 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block";
 @import "lightbox2/dist/css/lightbox.min.css";
 @import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 @source "../views";
 
 h3.heading {
@@ -86,6 +87,19 @@ img {
 .editor {
     * {
         @apply text-gray-600 text-lg;
+    }
+
+    h3 {
+        @apply text-3xl pb-10 relative text-blue-900 font-semibold;
+
+        &::after {
+            content: "";
+            @apply block w-[100px] border-b-4 border-blue-900 mt-3;
+        }
+
+        &.text-center::after {
+            @apply mx-auto;
+        }
     }
 
     table {

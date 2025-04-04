@@ -14,12 +14,18 @@
 
     <section class="py-20 bg-white">
         <div class="container mx-auto">
-            @if (!empty($page->image))
-                <div class="mb-5">
-                    <img src="{{ $page->image }}" alt="" class="w-full">
-                </div>
-            @endif
+            <h3 class="heading">{{ $page->title }}</h3>
             <div class="editor">{!! $page->description !!}</div>
+            <div class="grid grid-cols-3 gap-5">
+                @foreach ($documents as $document)
+                    <a href="{{ $document->file }}" target="_blank"
+                        class="bg-gray-100 border border-gray-300 px-10 py-10 rounded-md text-gray-700 hover:bg-blue-900 hover:text-white flex items-center gap-2 text-4xl transition-all">
+                        <i class="fas fa-download"></i>
+                        {{ $document->title }}
+                    </a>
+                @endforeach
+            </div>
         </div>
+
     </section>
 @endsection

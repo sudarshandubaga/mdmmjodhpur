@@ -7,6 +7,8 @@
             <div>
                 <a href="{{ route('home') }}" class="text-blue-900 font-semibold">Home</a>
                 <span>&raquo;</span>
+                <a href="{{ route('page.show', 'infrastructure') }}" class="text-blue-900 font-semibold">Infrastructure</a>
+                <span>&raquo;</span>
                 <span>{{ $page->title }}</span>
             </div>
         </div>
@@ -14,9 +16,9 @@
 
     <section class="py-20 bg-white">
         <div class="container mx-auto">
-            @if (!empty($page->image))
+            @if (!empty($page->banner_image))
                 <div class="mb-5">
-                    <img src="{{ $page->image }}" alt="" class="w-full">
+                    <img src="{{ $page->banner_image }}" alt="" class="w-full">
                 </div>
             @endif
             <div class="editor">{!! $page->description !!}</div>

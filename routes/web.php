@@ -15,7 +15,10 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\Web\AcademicController as WebAcademicController;
+use App\Http\Controllers\Web\BlogController as WebBlogController;
 use App\Http\Controllers\Web\HomeController;
+use App\Http\Controllers\Web\InfrastructureController as WebInfrastructureController;
 use App\Http\Controllers\Web\PageController as WebPageController;
 use Illuminate\Support\Facades\Route;
 
@@ -59,5 +62,8 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
+Route::resource('blog', WebBlogController::class)->only(['show']);
+Route::resource('infrastructure', WebInfrastructureController::class)->only(['show']);
+Route::resource('academic', WebAcademicController::class)->only(['index', 'show']);
+Route::post('/enquiry-submit', [EnquiryController::class, 'store'])->name('enquiry.submit');
 Route::get('/{page}', [WebPageController::class, 'show'])->name('page.show');

@@ -45,7 +45,7 @@ class BlogController extends Controller
 
         $blog->save();
 
-        $blog->slug .= "-" . base64_encode($blog->id);
+        $blog->slug .= "-" . $blog->id;
         $blog->save();
 
         return redirect(route('admin.blog.index'))->with('success', 'Success! New blog has been added.');

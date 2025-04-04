@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Course;
+use App\Models\Document;
 use App\Models\Faq;
+use App\Models\Gallery;
+use App\Models\Infrastructure;
+use App\Models\News;
 use App\Models\Page;
-use App\Models\StudioCategory;
-use App\Models\Syndication;
 use App\Models\Team;
-use App\Models\Vfx;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -31,6 +33,21 @@ class PageController extends Controller
             case 'faq':
                 return $this->faq($page);
 
+            case 'publication':
+                return $this->publication($page);
+
+            case 'infrastructure':
+                return $this->infrastructure($page);
+
+            case 'document':
+                return $this->documents($page);
+
+            case 'academics':
+                return $this->academic($page);
+
+            case 'gallery':
+                return $this->gallery($page);
+
             default:
                 return $this->defaultPage($page);
         }
@@ -38,8 +55,8 @@ class PageController extends Controller
 
     private function news($page)
     {
-        $blogs = Blog::latest()->paginate(15);
-        return view('web.screens.news', compact('page', 'blogs'));
+        $newss = News::latest()->paginate(15);
+        return view('web.screens.news', compact('page', 'newss'));
     }
 
     private function member($page)
@@ -61,6 +78,36 @@ class PageController extends Controller
     {
         $faqs = Faq::latest()->get();
         return view('web.screens.faq', compact('page', 'faqs'));
+    }
+
+    private function publication($page)
+    {
+        $publications = Blog::latest()->paginate(15);
+        return view('web.screens.publication', compact('page', 'publications'));
+    }
+
+    private function infrastructure($page)
+    {
+        $infrastructures = Infrastructure::latest()->paginate(15);
+        return view('web.screens.infrastructure', compact('page', 'infrastructures'));
+    }
+
+    private function documents($page)
+    {
+        $documents = Document::latest()->paginate(100);
+        return view('web.screens.document', compact('page', 'documents'));
+    }
+
+    private function academic($page)
+    {
+        $courses = Course::latest()->paginate(15);
+        return view('web.screens.courses', compact('page', 'courses'));
+    }
+
+    private function gallery($page)
+    {
+        $galleries = Gallery::latest()->paginate(15);
+        return view('web.screens.gallery', compact('page', 'galleries'));
     }
 
     private function defaultPage($page)

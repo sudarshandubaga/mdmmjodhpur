@@ -7,6 +7,8 @@
             <div>
                 <a href="{{ route('home') }}" class="text-blue-900 font-semibold">Home</a>
                 <span>&raquo;</span>
+                <a href="{{ route('page.show', 'publications') }}" class="text-blue-900 font-semibold">Publications</a>
+                <span>&raquo;</span>
                 <span>{{ $page->title }}</span>
             </div>
         </div>
@@ -19,6 +21,10 @@
                     <img src="{{ $page->image }}" alt="" class="w-full">
                 </div>
             @endif
+            <h3 class="heading !pb-2">{{ $page->title }}</h3>
+            <p class="text-sm !text-gray-400">
+                {{ $page->created_at->diffForHumans() }}
+            </p>
             <div class="editor">{!! $page->description !!}</div>
         </div>
     </section>

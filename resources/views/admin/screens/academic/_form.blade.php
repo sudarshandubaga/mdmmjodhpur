@@ -52,7 +52,7 @@
             <div class="card-body">
                 <div class="mb-3">
                     <label for="image_file" class="form-label">Choose Image</label>
-                    <x-crop-image name="image" image_file="image_file" width="500" height="375"
+                    <x-crop-image name="image" image_file="image_file" width="1500" height="500"
                         image="{{ @$academic->image }}" />
                 </div>
             </div>

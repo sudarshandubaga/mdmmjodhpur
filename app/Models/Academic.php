@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Academic extends Model
 {
     use HasUuids;
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
 }
