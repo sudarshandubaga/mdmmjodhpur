@@ -1,6 +1,6 @@
 @extends('admin.layouts.afterlogin')
 
-@section('title', 'News')
+@section('title', 'Document')
 
 @section('admin_content')
     <!-- Content -->
@@ -10,12 +10,12 @@
             <div class="col-sm-4">
                 <div class="card">
                     <h5 class="card-header">
-                        Add News
+                        Add Document
                     </h5>
                     <div class="card-body">
-                        <form action="{{ route('admin.news.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.document.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
-                            @include('admin.screens.news._form')
+                            @include('admin.screens.document._form')
                             <div class="d-grid">
                                 <button class="btn btn-primary">Save</button>
                             </div>
@@ -26,7 +26,7 @@
 
             <div class="col-sm-8">
                 <div class="card">
-                    <h5 class="card-header">View Newss</h5>
+                    <h5 class="card-header">View Documents</h5>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped">
@@ -39,24 +39,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($newss as $key => $news)
+                                    @foreach ($documents as $key => $document)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $news->title }}</td>
+                                            <td>{{ $document->title }}</td>
                                             <td>
-                                                @if ($news->file)
-                                                    <a href="{{ $news->file }}" target="_blank">View / Download</a>
+                                                @if ($document->file)
+                                                    <a href="{{ $document->file }}" target="_blank">View / Download</a>
                                                 @else
                                                     Not Uploaded
                                                 @endif
                                             </td>
                                             <td>
-                                                <a href="{{ route('admin.news.edit', $news) }}" title="Edit"
+                                                <a href="{{ route('admin.document.edit', $document) }}" title="Edit"
                                                     class="btn btn-link">
                                                     <i class="bx bxs-pencil"></i>
                                                 </a>
                                                 <button type="button" class="btn btn-link text-danger btn-delete"
-                                                    data-href="{{ route('admin.news.destroy', [$news]) }}">
+                                                    data-href="{{ route('admin.document.destroy', [$document]) }}">
                                                     <i class="bx bx-trash"></i>
                                                 </button>
                                             </td>

@@ -57,11 +57,11 @@ Route::group([
 });
 
 // Web Routes
-Route::get('/', function () {
-    return view('errors.construction');
-});
+// Route::get('/', function () {
+//     return view('errors.construction');
+// });
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::resource('blog', WebBlogController::class)->only(['show']);
 Route::resource('infrastructure', WebInfrastructureController::class)->only(['show']);
 Route::resource('academic', WebAcademicController::class)->only(['index', 'show']);

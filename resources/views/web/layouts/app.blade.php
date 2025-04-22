@@ -45,7 +45,8 @@
                         {{ $site->title }}
                     </div>
                     <div class="text-xs sm:text-base">
-                        Affiliated to Jai Narain Vyas university, Jodhpur (Managed by Madhuvan Shikshan Sansthan)
+                        Affiliated to Jai Narain Vyas University (JNVU), Jodhpur, recognized by NCTE (Delhi), <br />
+                        and managed by (Madhuban Shikshan Seva evam Vikas Sansthan, Jodhpur)
                     </div>
                 </div>
             </div>

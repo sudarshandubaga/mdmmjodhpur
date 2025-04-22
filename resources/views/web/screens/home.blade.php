@@ -52,7 +52,7 @@
                     <img src="{{ asset($about->image) }}" alt="Welcome Image"
                         class="rounded-lg object-cover aspect-[3/1] w-full mb-5">
 
-                    <h3 class="heading">Welcome to our Website</h3>
+                    <h3 class="heading">Welcome to {{ $site->title }}</h3>
                     <p>
                         {{ Str::limit(strip_tags($about->description), 300) }} <a
                             href="{{ route('page.show', 'about-us') }}" class="text-blue-900 font-bold">Read More
