@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -103,5 +104,25 @@ class TeamController extends Controller
         $team->delete();
 
         return redirect()->back()->with("success", "Success! Team has been deleted.");
+    }
+
+    public function governingCouncil()
+    {
+        $page = Page::where('template', 'member')->first();
+
+        return view('web.screens.member.govt-members', compact('page'));
+    }
+
+    public function teachingStaff()
+    {
+        $page = Page::where('template', 'member')->first();
+
+        $groups = Team::pluck("team_type");
+        $members = [];
+        foreach ($groups as $type) {
+            $members[$type] = Team::where('team_type', $type)->get();
+        }
+
+        return view('web.screens.member.teaching-staff', compact('members', 'page'));
     }
 }

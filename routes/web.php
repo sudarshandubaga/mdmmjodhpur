@@ -66,4 +66,7 @@ Route::resource('blog', WebBlogController::class)->only(['show']);
 Route::resource('infrastructure', WebInfrastructureController::class)->only(['show']);
 Route::resource('academic', WebAcademicController::class)->only(['index', 'show']);
 Route::post('/enquiry-submit', [EnquiryController::class, 'store'])->name('enquiry.submit');
+
+Route::get('/members/governing-council-members', [TeamController::class, 'governingCouncil'])->name('members.governing-council');
+Route::get('/members/teaching-staff', [TeamController::class, 'teachingStaff'])->name('members.teaching-staff');
 Route::get('/{page}', [WebPageController::class, 'show'])->name('page.show');

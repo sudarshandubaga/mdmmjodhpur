@@ -121,7 +121,7 @@
             <h3 class="heading text-center">Principal's Message</h3>
             <div class="flex flex-col md:grid md:grid-cols-3 gap-10 items-center">
                 <div class="col-span-1">
-                    <img src="{{ asset('principal.png') }}" alt="Principal's Photo" class="object-cover w-full bg-white">
+                    <img src="{{ asset('principal.webp') }}" alt="Principal's Photo" class="object-cover w-full bg-white">
                 </div>
                 <div class="col-span-2 flex flex-col gap-3">
                     <div class="editor">
