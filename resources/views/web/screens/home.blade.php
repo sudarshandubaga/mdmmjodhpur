@@ -32,7 +32,7 @@
                             News &amp; Notice
                         </div>
                         <div class="p-4 h-80 overflow-hidden">
-                            <marquee direction="up" class="h-full" onmouseover="stop()" onmouseout="start()">
+                            <marquee direction="up" class="h-full max-h-80" onmouseover="stop()" onmouseout="start()">
                                 <div class="flex flex-col gap-3">
                                     @foreach ($newss as $news)
                                         <a href="{{ $news->file ?: '#' }}" target="{{ $news->file ? '_blank' : '_self' }}"
@@ -52,7 +52,8 @@
                             </marquee>
                         </div>
                         <div class="mt-auto border-t bg-gray-50 px-4 py-3 text-center">
-                            <a href="{{ route('page.show', 'news') }}" class="text-blue-900 hover:text-orange-400 font-semibold">
+                            <a href="{{ route('page.show', 'news') }}"
+                                class="text-blue-900 hover:text-orange-400 font-semibold">
                                 View All News &amp; Notice &raquo;
                             </a>
                         </div>
