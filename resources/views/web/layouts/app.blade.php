@@ -80,21 +80,69 @@
                 <div>
                     <img src="{{ $site->logo }}" alt="{{ $site->title }}" class="mb-3 mx-auto sm:mx-0 size-24">
                     <h4 class="text-lg font-semibold mb-3 text-center sm:text-left">{{ $site->title }}</h4>
+                    
+                    <!-- External Links -->
+                    <div class="mt-6">
+                
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a href="https://www.jnvu.co.in/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 rounded-lg bg-gray-800 hover:bg-orange-500 transition-all duration-300 px-4 py-3">
+                
+                                <span class="material-symbols-outlined text-orange-400">school</span>
+                                <span>JNVU</span>
+                            </a>
+                
+                            <a href="https://web.ncte.gov.in/en"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 rounded-lg bg-gray-800 hover:bg-orange-500 transition-all duration-300 px-4 py-3">
+                
+                                <span class="material-symbols-outlined text-orange-400">account_balance</span>
+                                <span>NCTE</span>
+                            </a>
+                
+                            <a href="https://hte.rajasthan.gov.in/HTE/10524"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 rounded-lg bg-gray-800 hover:bg-orange-500 transition-all duration-300 px-4 py-3">
+                
+                                <span class="material-symbols-outlined text-orange-400">apartment</span>
+                                <span>HTE Rajasthan</span>
+                            </a>
+                
+                            <a href="https://sso.rajasthan.gov.in/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 rounded-lg bg-gray-800 hover:bg-orange-500 transition-all duration-300 px-4 py-3">
+                
+                                <span class="material-symbols-outlined text-orange-400">login</span>
+                                <span>SSO Portal</span>
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-3 text-center sm:text-left">Quick Links</h4>
-                    <div class="grid grid-cols-2">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-center sm:text-left">
+                        Quick Links
+                    </h4>
+                
+                    <!-- Existing Footer Menus -->
+                    <div class="grid grid-cols-2 gap-6">
                         <x-menu menuLocation="Footer 1" :params="[
                             'id' => 'menu',
                             'class' => 'space-y-2 text-gray-400',
                         ]" />
-
+                
                         <x-menu menuLocation="Footer 2" :params="[
                             'id' => 'menu',
                             'class' => 'space-y-2 text-gray-400',
                         ]" />
                     </div>
+                </div>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-3 text-center sm:text-left">Contact Address</h4>
@@ -119,6 +167,52 @@
                             {{ $site->email }}
                         </a>
                     </div>
+                    <div class="my-3 border-t border-gray-600"></div>
+                    @php
+                        $socialLinks = collect($site->social_links ?? [])->filter()->all();
+                    @endphp
+                    @if (!empty($socialLinks))
+                        <div>
+                            <h4 class="text-lg font-semibold mb-3 text-center sm:text-left">Follow Us</h4>
+                            <div class="flex flex-wrap gap-3 justify-center sm:justify-start">
+                                @if (!empty($site->social_links['facebook']))
+                                    <a href="{{ $site->social_links['facebook'] }}" target="_blank" rel="noopener noreferrer"
+                                        aria-label="Facebook"
+                                        class="flex items-center justify-center size-10 rounded-full bg-gray-800 hover:bg-orange-500 hover:text-white transition-all duration-300">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                @endif
+                                @if (!empty($site->social_links['instagram']))
+                                    <a href="{{ $site->social_links['instagram'] }}" target="_blank" rel="noopener noreferrer"
+                                        aria-label="Instagram"
+                                        class="flex items-center justify-center size-10 rounded-full bg-gray-800 hover:bg-orange-500 hover:text-white transition-all duration-300">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                @endif
+                                @if (!empty($site->social_links['linkedin']))
+                                    <a href="{{ $site->social_links['linkedin'] }}" target="_blank" rel="noopener noreferrer"
+                                        aria-label="LinkedIn"
+                                        class="flex items-center justify-center size-10 rounded-full bg-gray-800 hover:bg-orange-500 hover:text-white transition-all duration-300">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                @endif
+                                @if (!empty($site->social_links['twitter']))
+                                    <a href="{{ $site->social_links['twitter'] }}" target="_blank" rel="noopener noreferrer"
+                                        aria-label="Twitter"
+                                        class="flex items-center justify-center size-10 rounded-full bg-gray-800 hover:bg-orange-500 hover:text-white transition-all duration-300">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                @endif
+                                @if (!empty($site->social_links['youtube']))
+                                    <a href="{{ $site->social_links['youtube'] }}" target="_blank" rel="noopener noreferrer"
+                                        aria-label="YouTube"
+                                        class="flex items-center justify-center size-10 rounded-full bg-gray-800 hover:bg-orange-500 hover:text-white transition-all duration-300">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
             <div class="text-center mt-10 text-sm">

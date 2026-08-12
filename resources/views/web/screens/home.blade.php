@@ -24,27 +24,37 @@
     <section class="md:py-16 py-5">
         <div class="container mx-auto px-4">
             <div class="flex flex-col sm:grid sm:grid-cols-5 gap-10 items-center">
-                <div class="sm:col-span-2 h-full">
-                    <div class="bg-white flex flex-col rounded overflow-hidden h-full">
-                        <div class="bg-blue-900 text-white p-3 text-lg text-center uppercase">
+                <div class="sm:col-span-2">
+                    <div class="bg-white flex flex-col rounded-lg shadow-lg overflow-hidden">
+                        <div
+                            class="bg-blue-900 text-white px-4 py-3 text-lg text-center uppercase tracking-wide flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">campaign</span>
                             News &amp; Notice
                         </div>
-                        <div class="grow p-3">
+                        <div class="p-4 h-80 overflow-hidden">
                             <marquee direction="up" class="h-full" onmouseover="stop()" onmouseout="start()">
-                                <div>
+                                <div class="flex flex-col gap-3">
                                     @foreach ($newss as $news)
-                                        <div class="py-3 border-b">
-                                            <div class="bg-blue-900 inline-block px-3 text-white rounded">New</div>
-                                            <a href="#" class="text-black block hover:text-orange-400">
-                                                {{ $news->title }}
-                                            </a>
-                                            <div class="text-gray-400">
-                                                {{ $news->created_at->format('F d, Y') }}
+                                        <a href="{{ $news->file ?: '#' }}" target="{{ $news->file ? '_blank' : '_self' }}"
+                                            rel="noopener noreferrer"
+                                            class="block bg-gray-50 hover:bg-orange-50 border border-gray-200 rounded-lg p-3 transition-all duration-300">
+                                            <div class="flex items-center justify-between gap-2">
+                                                <span
+                                                    class="bg-orange-500 text-white text-xs uppercase tracking-wide px-2 py-0.5 rounded">New</span>
+                                                <span class="text-xs text-gray-400">
+                                                    {{ $news->created_at->format('d M Y') }}
+                                                </span>
                                             </div>
-                                        </div>
+                                            <h4 class="text-black font-semibold mt-2 leading-snug">{{ $news->title }}</h4>
+                                        </a>
                                     @endforeach
                                 </div>
                             </marquee>
+                        </div>
+                        <div class="mt-auto border-t bg-gray-50 px-4 py-3 text-center">
+                            <a href="{{ route('page.show', 'news') }}" class="text-blue-900 hover:text-orange-400 font-semibold">
+                                View All News &amp; Notice &raquo;
+                            </a>
                         </div>
                     </div>
                 </div>

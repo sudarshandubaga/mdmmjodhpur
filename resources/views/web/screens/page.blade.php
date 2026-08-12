@@ -15,9 +15,9 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto">
             @if (!empty($page->image))
-                <div class="mb-5">
+                <a class="mb-5 block" href="{{ $page->image }}" target="_blank">
                     <img src="{{ $page->image }}" alt="" class="w-full">
-                </div>
+                </a>
             @endif
             <div class="editor">{!! $page->description !!}</div>
         </div>

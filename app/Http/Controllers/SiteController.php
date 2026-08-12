@@ -53,10 +53,14 @@ class SiteController extends Controller
             $site->favicon = dataUriToImage($request->favicon, 'sites');
         }
 
-        // $site->facebook_link = $request->facebook_link;
-        // $site->instagram_link = $request->instagram_link;
-        // $site->twitter_link = $request->twitter_link;
-        // $site->linkedin_link = $request->linkedin_link;
+        $site->social_links = [
+            'facebook'  => $request->facebook_link,
+            'instagram' => $request->instagram_link,
+            'linkedin'  => $request->linkedin_link,
+            'twitter'   => $request->twitter_link,
+            'youtube'   => $request->youtube_link,
+        ];
+
         // $site->footer_scripts = $request->footer_scripts;
         // $site->offices = $request->addresses;
         $site->save();

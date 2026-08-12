@@ -1,0 +1,35 @@
+[30-Mar-2025 07:30:25 UTC] PHP Warning:  require(/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/rudrarmq/mdmmjodhpur.org/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:25 UTC] PHP Warning:  require(/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/rudrarmq/mdmmjodhpur.org/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:27 UTC] PHP Warning:  require(/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/rudrarmq/mdmmjodhpur.org/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:28 UTC] PHP Warning:  require(/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/rudrarmq/mdmmjodhpur.org/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:29 UTC] PHP Warning:  require(/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/rudrarmq/mdmmjodhpur.org/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:29 UTC] PHP Warning:  require(/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/rudrarmq/mdmmjodhpur.org/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:29 UTC] PHP Warning:  require(/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14
+[30-Mar-2025 07:30:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home1/rudrarmq/mdmmjodhpur.org/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home1/rudrarmq/mdmmjodhpur.org/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home1/rudrarmq/mdmmjodhpur.org/public/index.php on line 14

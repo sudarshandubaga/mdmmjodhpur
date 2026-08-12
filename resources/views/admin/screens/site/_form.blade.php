@@ -29,28 +29,46 @@
             <textarea name="google_map" id="google_map" class="form-control" placeholder="Enter Google Map URL" rows="5">{{ old('google_map', $site->google_map ?? '') }}</textarea>
         </div>
 
+        <div class="border-top pt-3">
+            <h6 class="mb-3">Social Links</h6>
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <label for="facebook_link" class="form-label">Facebook Link</label>
+                    <input type="text" name="facebook_link" id="facebook_link" class="form-control"
+                        placeholder="Enter Facebook link"
+                        value="{{ old('facebook_link', $site->social_links['facebook'] ?? '') }}">
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label for="instagram_link" class="form-label">Instagram Link</label>
+                    <input type="text" name="instagram_link" id="instagram_link" class="form-control"
+                        placeholder="Enter Instagram link"
+                        value="{{ old('instagram_link', $site->social_links['instagram'] ?? '') }}">
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label for="linkedin_link" class="form-label">LinkedIn Link</label>
+                    <input type="text" name="linkedin_link" id="linkedin_link" class="form-control"
+                        placeholder="Enter LinkedIn link"
+                        value="{{ old('linkedin_link', $site->social_links['linkedin'] ?? '') }}">
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label for="twitter_link" class="form-label">Twitter Link</label>
+                    <input type="text" name="twitter_link" id="twitter_link" class="form-control"
+                        placeholder="Enter Twitter link"
+                        value="{{ old('twitter_link', $site->social_links['twitter'] ?? '') }}">
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label for="youtube_link" class="form-label">YouTube Link</label>
+                    <input type="text" name="youtube_link" id="youtube_link" class="form-control"
+                        placeholder="Enter YouTube link"
+                        value="{{ old('youtube_link', $site->social_links['youtube'] ?? '') }}">
+                </div>
+            </div>
+        </div>
+
         {{-- <div class="mb-3">
             <label for="footer_scripts" class="form-label">Extra Scripts</label>
             <textarea name="footer_scripts" id="footer_scripts" class="form-control"
                 placeholder="Add scripts for Webmaster, Analytics, Adsense, Search Console, etc." rows="10">{{ old('footer_scripts', $site->footer_scripts ?? '') }}</textarea>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-4 mb-3">
-                <label for="facebook_link" class="form-label">Facebook Link</label>
-                <input type="text" name="facebook_link" id="facebook_link" class="form-control"
-                    placeholder="Enter Facebook link" value="{{ old('facebook_link', $site->facebook_link ?? '') }}">
-            </div>
-            <div class="col-sm-4 mb-3">
-                <label for="twitter_link" class="form-label">Twitter Link</label>
-                <input type="text" name="twitter_link" id="twitter_link" class="form-control"
-                    placeholder="Enter Twitter link" value="{{ old('twitter_link', $site->twitter_link ?? '') }}">
-            </div>
-            <div class="col-sm-4 mb-3">
-                <label for="instagram_link" class="form-label">Instagram Link</label>
-                <input type="text" name="instagram_link" id="instagram_link" class="form-control"
-                    placeholder="Enter Instagram link" value="{{ old('instagram_link', $site->instagram_link ?? '') }}">
-            </div>
         </div> --}}
     </div>
     <div class="col-sm-4 col-lg-3">

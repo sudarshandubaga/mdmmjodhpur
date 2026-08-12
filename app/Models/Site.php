@@ -9,6 +9,10 @@ class Site extends Model
 {
     use HasUuids;
 
+    protected $casts = [
+        'social_links' => 'array',
+    ];
+
     public function getLogoAttribute($image)
     {
         return $image ? asset('storage/' . $image) : null;
